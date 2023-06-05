@@ -1,6 +1,7 @@
 build_qrb5165_px4_dev:
   image: rb5-flight-px4-build-docker:v1.4
   stage: build
+  runs-on: self-hosted
   rules:
     - if: ($CI_COMMIT_BRANCH == "dev") && ($CI_PIPELINE_SOURCE != "schedule")
   script:
