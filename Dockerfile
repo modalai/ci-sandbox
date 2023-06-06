@@ -1,6 +1,6 @@
 # Ubuntu 20.04
-#FROM ubuntu:rb5-flight-px4-build-docker
-FROM ubuntu:latest
+FROM ubuntu:rb5-flight-px4-build-docker
+#FROM ubuntu:latest
 #WORKDIR /usr/local/workspace
 #CMD /bin/bash
 
@@ -18,4 +18,4 @@ WORKDIR /usr/local/workspace
 RUN make
 
 # Set the entry point to execute the built voxl-px4 binary
-ENTRYPOINT ["/voxl-sdk/services/voxl-px4/voxl-px4"]
+#ENTRYPOINT ["/voxl-sdk/services/voxl-px4/voxl-px4"]
