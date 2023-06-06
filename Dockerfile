@@ -1,5 +1,6 @@
 # Ubuntu 20.04
-FROM ubuntu:rb5-flight-px4-build-docker
+#FROM ubuntu:rb5-flight-px4-build-docker
+FROM ubuntu:latest
 #WORKDIR /usr/local/workspace
 #CMD /bin/bash
 
