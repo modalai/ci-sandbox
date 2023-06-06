@@ -3,7 +3,7 @@
 #WORKDIR /usr/local/workspace
 #CMD /bin/bash
 
-FROM ubuntu:latest
+FROM ubuntu:rb5-flight-px4-build-docker
 
 # Install required dependencies
 RUN apt-get update && apt-get install -y \
