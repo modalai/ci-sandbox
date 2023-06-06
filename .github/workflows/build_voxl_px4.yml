@@ -1,14 +1,38 @@
-name: build_qrb5165_px4_dev
-on: workflow_dispatch
+#name: build_qrb5165_px4
+#on: workflow_dispatch
+#jobs:
+#  build:
+#    runs-on: self-hosted
+#    container:
+#      image: rb5-flight-px4-build-docker:v1.4
+#    name: build
+#    steps:
+#      - run:
+#          /bin/bash clean.sh
+#          /bin/bash ci-tools/scripts/check-build-script.sh
+#          /bin/bash make_package.sh deb timestamp
+
+
+name: Build voxl-px4
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
-  job1:
-    runs-on: self-hosted
-    container:
-      image: rb5-flight-px4-build-docker:v1.4
-    name: build
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - run:
-          /bin/bash clean.sh
-          /bin/bash ci-tools/scripts/check-build-script.sh
-          /bin/bash make_package.sh deb timestamp
-          
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t voxl-px4 .
+
+      - name: Run Docker container
+        run: docker run --rm voxl-px4
