@@ -1,18 +1,19 @@
-name: build_qrb5165_px4_dev:
+name: build_qrb5165_px4_dev
 on: workflow_dispatch
 jobs:
-  image: rb5-flight-px4-build-docker:v1.4
-  stage: build
-  runs-on: self-hosted
-  script:
-    - /bin/bash clean.sh
-    - /bin/bash ci-tools/scripts/check-build-script.sh
-    - /bin/bash make_package.sh deb timestamp
-    - date
-  variables:
-    GIT_SUBMODULE_STRATEGY: recursive
-    GIT_STRATEGY: clone
-  artifacts:
-    expire_in: 20 min
-    paths:
-      - "*.deb"
+  job1:
+    runs-on: self-hosted
+    image: rb5-flight-px4-build-docker:v1.4
+    name: build
+    steps:
+      - run:
+          echo $/bin/bash clean.sh
+          echo $/bin/bash ci-tools/scripts/check-build-script.sh
+          echo $/bin/bash make_package.sh deb timestamp
+    variables:
+      GIT_SUBMODULE_STRATEGY: recursive
+      GIT_STRATEGY: clone
+    artifacts:
+      expire_in: 20 min
+      paths:
+        - "*.deb"
