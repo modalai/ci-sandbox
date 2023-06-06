@@ -8,7 +8,7 @@ jobs:
     name: build
     steps:
       - run:
-          echo $/bin/bash clean.sh
-          echo $/bin/bash ci-tools/scripts/check-build-script.sh
-          echo $/bin/bash make_package.sh deb timestamp
+          /bin/bash clean.sh
+          /bin/bash ci-tools/scripts/check-build-script.sh
+          /bin/bash make_package.sh deb timestamp
           
