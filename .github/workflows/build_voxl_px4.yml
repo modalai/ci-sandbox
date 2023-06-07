@@ -27,8 +27,8 @@ jobs:
   build:
     runs-on: self-hosted
     
-    container:
-      image: rb5-flight-px4-build-docker:v1.4
+#    container:
+#      image: rb5-flight-px4-build-docker:v1.4
     
     steps:
       - uses: actions/checkout@v3
