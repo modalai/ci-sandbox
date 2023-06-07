@@ -24,7 +24,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubtuntu-latest
     
     container:
       image: rb5-flight-px4-build-docker:v1.4
