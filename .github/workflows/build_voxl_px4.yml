@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build image
-        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        run: docker build . --file Dockerfile --rb5-flight-px4-build-docker:v1.4:$(date +%s)
 
 #
 #      - name: Set up Docker
