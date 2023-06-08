@@ -1,5 +1,10 @@
 name: build_qrb5165_px4
-on: workflow_dispatch
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
 jobs:
   build:
     runs-on: self-hosted
