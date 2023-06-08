@@ -16,6 +16,7 @@ jobs:
     steps:
       - run: |
           docker run rb5-flight-px4-build-docker:latest ls /home
+          rm -r voxl-px4
           git clone https://gitlab.com/voxl-public/voxl-sdk/services/voxl-px4.git
           ls voxl-px4
           
