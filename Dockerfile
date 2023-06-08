@@ -17,4 +17,4 @@ WORKDIR /usr/local/workspace
 RUN make
 
 # Set the entry point to execute the built voxl-px4 binary
-#ENTRYPOINT ["/voxl-sdk/services/voxl-px4/voxl-px4"]
+ENTRYPOINT ["/voxl-sdk/services/voxl-px4/voxl-px4"]
