@@ -1,4 +1,4 @@
-name: build_qrb5165_px4
+name: container
 on:
   push:
     branches: [ "main" ]
@@ -8,12 +8,13 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-  #  container:
-  #    image: rb5-flight-px4-build-docker:latest
-    name: build
-    steps:
-      - run:
-          /bin/bash clean.sh
-          /bin/bash ci-tools/scripts/check-build-script.sh
-          /bin/bash make_package.sh deb timestamp
+    container:
+      image: rb5-flight-px4-build-docker:latest
+
+
+    #steps:
+    #  - run:
+    #      /bin/bash clean.sh
+    #      /bin/bash ci-tools/scripts/check-build-script.sh
+    #      /bin/bash make_package.sh deb timestamp
 
