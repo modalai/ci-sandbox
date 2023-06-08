@@ -15,6 +15,7 @@ jobs:
           docker run rb5-flight-px4-build-docker:latest ls /home
           git clone https://gitlab.com/voxl-public/voxl-sdk/services/voxl-px4.git
           ls voxl-px4
+          docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
 #          /bin/bash clean.sh
 #          /bin/bash ci-tools/scripts/check-build-script.sh
