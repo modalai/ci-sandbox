@@ -11,7 +11,6 @@ jobs:
     container:
       image: rb5-flight-px4-build-docker:latest
 
-
     steps:
       - run:
           /bin/bash ls
