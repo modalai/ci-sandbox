@@ -12,9 +12,10 @@ jobs:
       image: rb5-flight-px4-build-docker:latest
 
 
-    #steps:
-    #  - run:
-    #      /bin/bash clean.sh
-    #      /bin/bash ci-tools/scripts/check-build-script.sh
-    #      /bin/bash make_package.sh deb timestamp
+    steps:
+      - run:
+          /bin/bash ls
+#          /bin/bash clean.sh
+#          /bin/bash ci-tools/scripts/check-build-script.sh
+#          /bin/bash make_package.sh deb timestamp
 
