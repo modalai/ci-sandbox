@@ -1,6 +1,6 @@
 # Ubuntu 20.04
-#FROM ubuntu:rb5-flight-px4-build-docker
-FROM ubuntu:20.04
+FROM ubuntu:rb5-flight-px4-build-docker
+#FROM ubuntu:20.04
 #ENTRYPOINT echo "HelloTest"
 ENV TZ=PDT
 RUN apt-get -y update
