@@ -19,6 +19,7 @@ jobs:
           rm -r voxl-px4
           git clone https://gitlab.com/voxl-public/voxl-sdk/services/voxl-px4.git
           ls voxl-px4
+          cd /home
           clean.sh
           ci-tootls/scripts/check-build-script.sh
           make_package.sh dev timestamp
