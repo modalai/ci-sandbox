@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - run: |
-          docker run -v /home/demir/repos/ci-sandbox:/build_pkg.sh --entrypoint "./build_pkg.sh" rb5-flight-px4-build-docker:latest
+          docker run -v /home/demir/repos/ci-sandbox:/scripts -w /scripts rb5-flight-px4-build-docker:latest ./build_pkg.sh
           
           git clone https://gitlab.com/voxl-public/voxl-sdk/services/voxl-px4.git
           ls voxl-px4
