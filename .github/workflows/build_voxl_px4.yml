@@ -15,12 +15,12 @@ jobs:
 
     steps:
       - run: |
-          docker run rb5-flight-px4-build-docker:latest ls /home
-          rm -r voxl-px4
+          docker run -v /repos/ci-sandbox:/scripts -w /scripts rb5-flight-px4-build-docker:latest ./build_pkg.sh
+          
           git clone https://gitlab.com/voxl-public/voxl-sdk/services/voxl-px4.git
           ls voxl-px4
-          ls /scripts
- 
+          
+ #rm -r voxl-px4
  
   #        clean.sh
   #        build.sh
