@@ -1,1 +1,3 @@
-chmod +x ci-sandbox/build_pkg.sh
+chmod +x build_pkg.sh
+
+echo "Hello Docker"
