@@ -15,22 +15,25 @@ jobs:
 
     steps:
       - run: |
+          git clone https://gitlab.com/voxl-public/voxl-sdk/services/voxl-px4.git
+          cd voxl-px4
+          ls
+          git submodule update --init --recursive
+          
           docker run -v /home/demir/repos/ci-sandbox:/scripts -w /scripts rb5-flight-px4-build-docker:latest ./build_pkg.sh
           
+ 
+ 
  
  
   #        clean.sh
   #        build.sh
   #        make_package.sh
   #        run-docker.sh
-          
-          
+            
 #          /bin/bash clean.sh
 #          /bin/bash ci-tools/scripts/check-build-script.sh
 #          /bin/bash make_package.sh deb timestamp
-
-
-
 
 #  steps:
 #    - uses: actions/checkout@v3
