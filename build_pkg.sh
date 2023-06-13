@@ -7,7 +7,8 @@ cd voxl-px4
 ls
 git submodule update --init --recursive
 
-#./clean.sh
-#./build.sh
+echo "Before clean/build"
+./clean.sh
+./build.sh
 
 echo "Hello Docker"
