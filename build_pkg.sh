@@ -12,3 +12,4 @@ echo "Before clean/build"
 ./build.sh
 
 echo "Hello Docker"
+
